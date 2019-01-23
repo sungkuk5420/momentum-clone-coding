@@ -8,22 +8,29 @@
     <link rel="stylesheet" type="text/css" href="./style.scss">
 </head>
 <body>
-    <div class="js-clock">
-        <h1>00:00</h1>
+    <div class="bg-div"></div>
+    <div class="main-contanier">
+        <div class="js-clock clock">
+            <h1>00:00</h1>
+        </div>
+        <div class="name-div">
+            <span class="message">Good evening, </span><span class="js-greetings greetings"></span>
+        </div>
+        <form class="js-form">
+            <input type="text" placeholder="What are you name?">
+        </form>
+        <form class="js-toDoForm showing toDoForm">
+            <h3>What is your main focus for today?</h3>
+            <input type="text" >
+        </form>
+
+        <ul class="js-toDoList toDoList">
+
+        </ul>
     </div>
-    <form class="js-form">
-        <input type="text" placeholder="What are you name?">
-    </form>
-    <form class="js-toDoForm showing">
-        <input type="text" placeholder="Write a to do">
-    </form>
-
-    <ul class="js-toDoList">
-
-    </ul>
-    <h4 class="js-greetings greetings"></h4>
     <script src="./clock.js"></script>
     <script src="./gretting.js"></script>
     <script src="./todo.js"></script>
+    <script src="./bg.js"></script>
 </body>
 </html>

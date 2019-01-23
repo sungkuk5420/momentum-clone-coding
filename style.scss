@@ -11,3 +11,110 @@ h4{
 .showing {
     display: block;
 }
+
+body{
+    margin: 0;
+    padding: 0;
+    .bg-div{
+        top: 0;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        z-index: -1;
+
+        &.bg-1{
+            background-image: url(./images/1.jpg);
+        }
+        &.bg-2{
+            background-image: url(./images/2.jpg);
+        }
+        &.bg-3{
+            background-image: url(./images/3.jpg);
+        }
+    }
+    .main-contanier{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-40%);
+        overflow: hidden;
+    }
+    .clock{
+        cursor: default;
+        font-size: 7vw;
+        color: white;
+        letter-spacing: -5px;
+        text-align: center;
+        h1{
+            margin:0;
+            line-height: 1;
+            font-weight: bold;
+        }
+    }
+    .message,
+    .greetings{
+        display: inline-block;
+        color: white;
+        font-size: 3vw;
+        text-align: center;
+        font-weight: bold;
+    }
+    .message{
+        margin-right: 10px;
+    }
+    .name-div{
+        text-align: center;
+    }
+
+    .toDoForm{
+        margin-top: 5vh;
+        width: 100%;
+        color: white;
+        font-size: 2.1vw;
+        font-weight: bold;
+        h3{
+            text-align: center;
+        }
+        input{
+            width: 100%;
+            margin: 0 auto;
+            padding-top: 15px;
+            font-size: 5vw;
+            display: block;
+            background: 0;
+            border: 0;
+            border-bottom: 2px solid #fff;
+            color: #fff;
+            font-weight: 500;
+            outline: 0;
+            text-align: center;
+            transition: border-color .2s ease;
+            line-height: 100%;
+        }
+    }
+
+    .toDoList{
+        height: 300px;
+        overflow-y:scroll;
+        list-style-type: none;
+        margin-right: -16px;
+        padding-left: 10px;
+        li{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            span,
+            button{
+                color: white;
+                margin-right: 20px;
+            }
+            span{
+                font-size: 2vw;
+                font-weight: bold;
+            }
+        }
+    }
+}
