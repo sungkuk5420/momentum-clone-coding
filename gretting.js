@@ -6,18 +6,18 @@ const USER_LS = "currentUser",
     SHOWING_CN = "showing";
 
 
-const init = () => {
+const grettingInit = () => {
     loadName();
 };
 
 const saveName = (text) =>{
     localStorage.setItem(USER_LS, text);
-}
+};
 
 const paintGreeting = (text) => {
     form.classList.remove(SHOWING_CN);
     greeting.classList.add(SHOWING_CN);
-    greeting.innerText = `Hello ${text}`;
+    greeting.innerText = `${text}`;
 };
 
 const handleSubmit = (event) => {
@@ -25,7 +25,7 @@ const handleSubmit = (event) => {
     const userName = input.value;
     paintGreeting(userName);
     saveName(userName);
-}
+};
 
 const askForName = () => {
     form.classList.add(SHOWING_CN);
@@ -40,4 +40,4 @@ const loadName = (name) => {
         paintGreeting(currentUser);
     }
 };
-init();
+grettingInit();
