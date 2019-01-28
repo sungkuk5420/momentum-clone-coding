@@ -46,7 +46,7 @@ body {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -40%);
+        transform: translate(-50%, -50%);
         overflow: hidden;
     }
 
@@ -308,6 +308,19 @@ body {
         &:indeterminate:disabled+span::before {
             border-color: transparent;
             background-color: currentColor;
+        }
+    }
+}
+
+
+@media screen and (min-width: 1200px) {
+    body {
+        .main-contanier {
+            .clock {
+                h1 {
+                    font-size: 200px;
+                }
+            }
         }
     }
 }
