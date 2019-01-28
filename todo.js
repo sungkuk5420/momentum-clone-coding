@@ -38,16 +38,23 @@ const deleteToDo = (event) => {
 
 const paintToDo = (text) => {
     const li = document.createElement("li");
+    const delBtn = document.createElement("button");
+    const checkboxLabel = document.createElement("label");
+    const checkboxInput = document.createElement("input");
     const span = document.createElement("span");
     span.innerText = text;
-    const delBtn = document.createElement("button");
+    checkboxInput.type = 'checkbox';
+    checkboxLabel.classList.add('material-checkbox');
+
     const newId = toDoArray.length + 1;
     li.id = newId;
-    delBtn.innerText = "✖";
+    delBtn.innerText = "✕";
 
     delBtn.addEventListener('click',deleteToDo);
 
-    li.appendChild(span);
+    checkboxLabel.appendChild(checkboxInput);
+    checkboxLabel.appendChild(span);
+    li.appendChild(checkboxLabel);
     li.appendChild(delBtn);
     toDoList.appendChild(li);
     saveToDo(text);
