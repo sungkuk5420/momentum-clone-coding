@@ -17,6 +17,8 @@ const saveName = (text) => {
 const paintGreeting = (text) => {
     form.classList.remove(SHOWING_CN);
     greeting.classList.add(SHOWING_CN);
+    document.querySelector(".js-toDoForm").classList.add(SHOWING_CN);
+    document.querySelector(".js-toDoList").classList.add(SHOWING_CN);
     greeting.innerText = `${text}`;
 };
 
