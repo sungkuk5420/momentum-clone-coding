@@ -1,6 +1,6 @@
 const todoForm = document.querySelector(".js-toDoForm"),
-  toDoInput = todoForm.querySelector("input"),
-  toDoList = document.querySelector(".js-toDoList");
+    toDoInput = todoForm.querySelector("input"),
+    toDoList = document.querySelector(".js-toDoList");
 
 const TODO_LS = "toDos";
 let toDoArray = [];
@@ -8,19 +8,19 @@ let toDoArray = [];
 
 const toDoInit = () => {
     loadToDos();
-    todoForm.addEventListener('submit',toDoHandleSubmit);
+    todoForm.addEventListener('submit', toDoHandleSubmit);
 };
 
-const saveToDo = (text) =>{
+const saveToDo = (text) => {
     const newTodo = {
-        id: toDoArray.length+1,
+        id: toDoArray.length + 1,
         text: text
     }
 
     toDoArray.push(newTodo);
     saveToDos();
 }
-const saveToDos = () =>{
+const saveToDos = () => {
     localStorage.setItem(TODO_LS, JSON.stringify(toDoArray));
 }
 
@@ -50,7 +50,7 @@ const paintToDo = (text) => {
     li.id = newId;
     delBtn.innerText = "✕";
 
-    delBtn.addEventListener('click',deleteToDo);
+    delBtn.addEventListener('click', deleteToDo);
 
     checkboxLabel.appendChild(checkboxInput);
     checkboxLabel.appendChild(span);
@@ -71,9 +71,9 @@ const toDoHandleSubmit = (event) => {
 const loadToDos = (name) => {
     const todos = localStorage.getItem(TODO_LS);
     console.log(todos);
-    if(todos !== null){
+    if (todos !== null) {
         const parsedToDos = JSON.parse(todos);
-        parsedToDos.forEach((currentTodo)=>{
+        parsedToDos.forEach((currentTodo) => {
             paintToDo(currentTodo.text);
         });
     }
