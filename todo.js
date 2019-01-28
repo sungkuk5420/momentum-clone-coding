@@ -36,6 +36,10 @@ const deleteToDo = (event) => {
     saveToDos();
 };
 
+const scrollDown = () => {
+    toDoList.scrollTop = 99999;
+};
+
 const paintToDo = (text) => {
     const li = document.createElement("li");
     const delBtn = document.createElement("button");
@@ -58,6 +62,7 @@ const paintToDo = (text) => {
     li.appendChild(delBtn);
     toDoList.appendChild(li);
     saveToDo(text);
+    scrollDown();
 };
 
 const toDoHandleSubmit = (event) => {

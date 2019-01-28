@@ -1,6 +1,7 @@
 const form = document.querySelector(".js-form"),
     input = form.querySelector("input"),
-    greeting = document.querySelector(".js-greetings");
+    greeting = document.querySelector(".js-greetings"),
+    nameDiv = document.querySelector(".js-name-div");
 
 const USER_LS = "currentUser",
     SHOWING_CN = "showing";
@@ -17,6 +18,7 @@ const saveName = (text) => {
 const paintGreeting = (text) => {
     form.classList.remove(SHOWING_CN);
     greeting.classList.add(SHOWING_CN);
+    nameDiv.classList.add(SHOWING_CN);
     document.querySelector(".js-toDoForm").classList.add(SHOWING_CN);
     document.querySelector(".js-toDoList").classList.add(SHOWING_CN);
     greeting.innerText = `${text}`;
