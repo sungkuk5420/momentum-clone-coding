@@ -4,7 +4,7 @@ const API_KEY = '5c552a851da721b8a4ada0586b055a04';
 const weatherDOM = document.querySelector('.js-weather');
 const cityDOM = document.querySelector('.js-city');
 const getWeather = (lat, lon) => {
-	fetch(`http://api.openweathermap.org/data/2.5/weather?units=metric&lat=${lat}&lon=${lon}&appId=${API_KEY}`)
+	fetch(`https://api.openweathermap.org/data/2.5/weather?units=metric&lat=${lat}&lon=${lon}&appId=${API_KEY}`)
 		.then(function (response) {
 			return response.json();
 		})
