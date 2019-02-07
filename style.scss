@@ -158,6 +158,23 @@ body {
     }
 }
 
+.weather-div {
+    position: fixed;
+    right: 50px;
+    top: 50px;
+    color: white;
+
+    .weather {
+        font-size: 4vw;
+    }
+
+    .city {
+        font-size: 2vw;
+        font-weight: 500;
+        opacity: 0.7;
+    }
+}
+
 .material-checkbox {
     z-index: 0;
     position: relative;
