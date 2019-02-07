@@ -408,13 +408,117 @@ body {
 }
 
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1024px) {
     body {
         .main-contanier {
             .clock {
                 h1 {
-                    font-size: 200px;
+                    font-size: 18vw;
                 }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+
+        .bg-div {
+            top: 0;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            z-index: -1;
+
+            &.bg-1 {
+                background-image: url(./images/big-1.jpg);
+            }
+
+            &.bg-2 {
+                background-image: url(./images/big-2.jpg);
+            }
+
+            &.bg-3 {
+                background-image: url(./images/big-1.jpg);
+            }
+
+            &.bg-4 {
+                background-image: url(./images/big-2.jpg);
+            }
+
+            &.bg-5 {
+                background-image: url(./images/big-3.jpg);
+            }
+
+            &.bg-6 {
+                background-image: url(./images/big-1.jpg);
+            }
+
+            &.bg-7 {
+                background-image: url(./images/big-2.jpg);
+            }
+
+            &.bg-8 {
+                background-image: url(./images/big-3.jpg);
+            }
+
+            &.bg-9 {
+                background-image: url(./images/big-1.jpg);
+            }
+
+            &.bg-10 {
+                background-image: url(./images/big-2.jpg);
+            }
+
+            &.bg-11 {
+                background-image: url(./images/big-3.jpg);
+            }
+
+            &.bg-12 {
+                background-image: url(./images/big-1.jpg);
+            }
+
+            &.bg-13 {
+                background-image: url(./images/big-2.jpg);
+            }
+
+            &.bg-14 {
+                background-image: url(./images/big-3.jpg);
+            }
+
+            &.bg-15 {
+                background-image: url(./images/big-1.jpg);
+            }
+
+            &.bg-16 {
+                background-image: url(./images/big-2.jpg);
+            }
+
+            &.bg-17 {
+                background-image: url(./images/big-3.jpg);
+            }
+
+            &.bg-18 {
+                background-image: url(./images/big-1.jpg);
+            }
+
+            &.bg-19 {
+                background-image: url(./images/big-2.jpg);
+            }
+
+            &.bg-20 {
+                background-image: url(./images/big-3.jpg);
+            }
+
+            &.bg-21 {
+                background-image: url(./images/big-1.jpg);
+            }
+
+            &.bg-22 {
+                background-image: url(./images/big-2.jpg);
             }
         }
     }
