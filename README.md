@@ -1,6 +1,22 @@
-# momentumCloneCoding
-momentumCloneCoding with VanillaJS
-모멘텀 클론 코딩입니다.
+## momentumCloneCoding
 
-### Demo Site
+momentumCloneCoding with VanillaJS
+
+## Demo Site
 https://sungkuk5420.github.io/momentumCloneCoding/
+
+## Git Clone
+
+```git clone https://github.com/sungkuk5420/momentumCloneCoding.git```
+
+## NPM Install
+
+```npm install```
+
+## Start
+
+```npm start```
+
+## Build
+
+```npm run-script build```
