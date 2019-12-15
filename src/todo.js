@@ -11,9 +11,10 @@ const toDoInit = () => {
     todoForm.addEventListener('submit', toDoHandleSubmit);
 };
 
-const saveToDo = (text) => {
+const saveToDo = (id,checked,text) => {
     const newTodo = {
-        id: toDoArray.length + 1,
+        id,
+        checked: checked,
         text: text
     }
 
@@ -40,17 +41,39 @@ const scrollDown = () => {
     toDoList.scrollTop = 99999;
 };
 
-const paintToDo = (text) => {
+const checkTodo = (thisObj) => {
+    const checkbox = event.target;
+    const todoId = checkbox.parentNode.dataset.todoid;
+    const checked = checkbox.parentNode.querySelector('input[type=checkbox]').checked;
+    const todos = localStorage.getItem(TODO_LS);
+    console.log(todos);
+    if (todos !== null) {
+        const parsedToDos = JSON.parse(todos);
+        parsedToDos.forEach((currentTodo) => {
+            if(currentTodo.id == todoId){
+                currentTodo.checked = checked;
+            }
+        });
+        toDoArray = parsedToDos;
+        saveToDos();
+    }
+}
+
+const paintToDo = (text,checked) => {
     const li = document.createElement("li");
     const delBtn = document.createElement("button");
     const checkboxLabel = document.createElement("label");
     const checkboxInput = document.createElement("input");
     const span = document.createElement("span");
+    const newId = new Date().getUTCMilliseconds();
     span.innerText = text;
     checkboxInput.type = 'checkbox';
+    console.log(checked);
+    checkboxInput.checked = checked;
     checkboxLabel.classList.add('material-checkbox');
+    checkboxLabel.addEventListener('click',checkTodo);
+    checkboxLabel.dataset.todoid = newId;
 
-    const newId = toDoArray.length + 1;
     li.id = newId;
     delBtn.innerText = "✕";
 
@@ -61,14 +84,14 @@ const paintToDo = (text) => {
     li.appendChild(checkboxLabel);
     li.appendChild(delBtn);
     toDoList.appendChild(li);
-    saveToDo(text);
+    saveToDo(newId,checked,text);
     scrollDown();
 };
 
 const toDoHandleSubmit = (event) => {
     event.preventDefault();
     const todo = toDoInput.value;
-    paintToDo(todo);
+    paintToDo(todo,false);
 
     toDoInput.value = "";
 }
@@ -79,7 +102,7 @@ const loadToDos = (name) => {
     if (todos !== null) {
         const parsedToDos = JSON.parse(todos);
         parsedToDos.forEach((currentTodo) => {
-            paintToDo(currentTodo.text);
+            paintToDo(currentTodo.text,currentTodo.checked);
         });
     }
 };
