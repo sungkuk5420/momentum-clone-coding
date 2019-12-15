@@ -65,7 +65,7 @@ const paintToDo = (text,checked) => {
     const checkboxLabel = document.createElement("label");
     const checkboxInput = document.createElement("input");
     const span = document.createElement("span");
-    const newId = new Date().getUTCMilliseconds();
+    const newId = new Date().getTime();
     span.innerText = text;
     checkboxInput.type = 'checkbox';
     console.log(checked);
