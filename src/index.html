@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Parcel Experiments</title>
+    <link rel="pwa-setup" href="/manifest.json">
+    <link rel="stylesheet" type="text/css" href="./style.scss">
+</head>
+
+<body>
+    <div class="bg-div"></div>
+    <div class="weather-div">
+        <div class="js-weather weather"></div>
+        <div class="js-city city"></div>
+    </div>
+    <div class="main-contanier">
+        <div class="js-clock clock">
+            <h1>00:00</h1>
+        </div>
+        <div class="js-name-div name-div">
+            <span class="message">Good evening, </span><span class="js-greetings greetings"></span>
+        </div>
+        <form class="js-form">
+            <input type="text" placeholder="What is your name?">
+        </form>
+        <form class="js-toDoForm toDoForm">
+            <h3>What is your main focus for today?</h3>
+            <input type="text">
+        </form>
+
+        <ul class="js-toDoList toDoList">
+
+        </ul>
+    </div>
+    <script src="./clock.js"></script>
+    <script src="./gretting.js"></script>
+    <script src="./todo.js"></script>
+    <script src="./bg.js"></script>
+    <script src="./weather.js"></script>
+    <script async src="./pwacompat.js"></script>
+    <script>
+        var iOS = !!navigator.platform && /iPhone|iPod/.test(navigator.platform);
+        if (iOS) {
+            document.querySelector('link[rel="manifest"]').setAttribute("rel", "no-on-ios");
+        }
+        const isIos = () => {
+            const userAgent = window.navigator.userAgent.toLowerCase();
+            return /iphone|ipad|ipod/.test(userAgent);
+        }
+        // Detects if device is in standalone mode
+        const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
+
+        // Checks if should display install popup notification:
+        if (isIos() && isInStandaloneMode()) {
+            //window.location.href = "https://isvsi-14ddd2ecd93-162f89c5e8-1666011d547.force.com/unileveripmipad/s/";
+        }
+
+        function OpenLink(theLink, event) {
+            window.location.href = theLink.href;
+        }
+        var a = document.getElementsByTagName("a");
+        for (var i = 0; i < a.length; i++) {
+            a[i].onclick = function () {
+                event.preventDefault();
+                window.location = this.getAttribute("href");
+                return false
+            }
+        }
+    </script>
+    <script>
+        (function (a, b, c) {
+            if (c in b && b[c]) {
+                var d, e = a.location,
+                    f = /^(a|html)$/i;
+                a.addEventListener("click", function (a) {
+                    d = a.target;
+                    while (!f.test(d.nodeName)) d = d.parentNode;
+                    "href" in d && (d.href.indexOf("http") || ~d.href.indexOf(e.host)) && (a.preventDefault(),
+                        e.href = d.href)
+                }, !1)
+            }
+        })(document, window.navigator, "standalone")
+    </script>
+</body>
+
+</html>
