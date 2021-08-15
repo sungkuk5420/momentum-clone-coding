@@ -4,7 +4,7 @@ momentum 클론 코딩입니다.
 
 ## Demo / 데모
 
-[라이브 데모 보기](momentum-clone-coding.netlify.app/)
+[라이브 데모 보기](https://momentum-clone-coding.netlify.app/)
 
 ## Getting Started / 어떻게 시작하나요?
 
