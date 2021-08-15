@@ -1,0 +1,8 @@
+{
+    "modules":false,
+    "plugins":{
+        "postcss-custom-properties": {
+          preserve: false
+        }
+    }
+}

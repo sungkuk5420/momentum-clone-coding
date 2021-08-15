@@ -1,0 +1,34 @@
+{
+  "name": "momentum-clone-coding",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sungkuk5420/momentum-clone-coding.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sungkuk5420/momentum-clone-coding/issues"
+  },
+  "homepage": "https://github.com/sungkuk5420/momentum-clone-coding#readme",
+  "dependencies": {
+    "@babel/core": "^7.15.0",
+    "babel-preset-env": "^1.7.0",
+    "node-sass": "^4.14.1",
+    "parcel": "^1.10.3",
+    "parcel-bundler": "^1.10.3",
+    "postcss-custom-properties": "^8.0.8",
+    "postcss-modules": "^1.4.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.3.1",
+    "babel-core": "^6.26.3",
+    "custom-properties": "^1.0.1"
+  },
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html -d build --public-url /"
+  }
+}
