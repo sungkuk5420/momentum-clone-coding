@@ -1,13 +1,10 @@
 ## momentum-clone-coding
 
-momentumCloneCoding with VanillaJS
-# vue-images-scraper
-
-AI 모델 학습을 위한 이미지 스크랩 웹사이트입니다. 
+momentum 클론 코딩입니다.
 
 ## Demo / 데모
 
-[라이브 데모 보기](https://vue-image-scrapper.herokuapp.com/)
+[라이브 데모 보기](momentum-clone-coding.netlify.app/)
 
 ## Getting Started / 어떻게 시작하나요?
 
